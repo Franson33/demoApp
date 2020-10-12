@@ -1,0 +1,16 @@
+	## Project static
+/node_modules/*
+.cache
+.gitconfig
+access_log
+error_log
+yarn.lock
+
+## OS or IDE files
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+.idea
+ehthumbs.db
+Thumbs.db
