@@ -5,7 +5,36 @@
     <meta httpequiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1.00001,viewport-fit=cover"/>
     <title>myDemoApp</title>
-    <style>#root,body,html{width:100%;-webkit-overflow-scrolling:touch;margin:0;padding:0;min-height:100%}#root{flex-shrink:0;flex-basis:auto;flex-grow:1;display:flex;flex:1}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;height:100%}body{display:flex;overflow-y:auto;overscroll-behavior-y:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-ms-overflow-style:scrollbar}</style>
+    <style>
+      body,html{-webkit-overflow-scrolling:touch;margin:0;padding:0;}
+      html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;min-height:100%}
+      body{
+        display:flex;
+        overflow-y:auto;
+        overscroll-behavior-y:none;
+        text-rendering:optimizeLegibility;
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
+        -ms-overflow-style:scrollbar;
+        height: 100%;
+        z-index:1;
+        flex-grow:1;
+        overflow:scroll;
+      }
+      @media(min-width:1024px){
+        body{
+          margin: auto;
+          border-width:4em;
+          border-style:solid;
+          border-color:transparent;
+          border-image:url('https://www.freepngimg.com/thumb/tablet/37666-2-android-tablet-frame.png');
+          border-image-slice: 84;
+          height: 32em;
+          max-height: 700px;
+          max-width: 1100px;
+        }
+      }
+    </style>
     <link rel="manifest" href="./manifest.json">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
@@ -38,7 +67,7 @@
         </div>
       </form>
     </noscript>
-    <div id="root" style="position:absolute;width:415px;right:37%;"></div>
+    <div id="root" style="display:flex;z-index:2;flex-grow:1;"></div>
     <script src="./static/js/runtime~app.3d049488.js"></script>
     <script src="./static/js/2.718d9ced.chunk.js"></script>
     <script src="./static/js/app.45d22cc6.chunk.js"></script>
